@@ -1,0 +1,40 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/raleway-v27-latin_cyrillic-600.woff") format("woff") url("../fonts/raleway-v27-latin_cyrillic-600.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/raleway-v27-latin_cyrillic-800.woff") format("woff") url("../fonts/raleway-v27-latin_cyrillic-800.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/raleway-v27-latin_cyrillic-italic.woff") format("woff") url("../fonts/raleway-v27-latin_cyrillic-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/raleway-v27-latin_cyrillic-regular.woff") format("woff") url("../fonts/raleway-v27-latin_cyrillic-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}

@@ -3,13 +3,11 @@ import React from 'react';
 import { AppProviders } from './providers/AppProviders';
 import { UnauthenticatedApp } from './unauthenticated/UnauthenticatedApp';
 
-const App = () => {
-  return (
-    <AppProviders>
-      <UnauthenticatedApp />
-      <ReactQueryDevtools initialIsOpen={true} />
-    </AppProviders>
-  );
-};
+const App = () => (
+  <AppProviders>
+    <UnauthenticatedApp />
+    <ReactQueryDevtools initialIsOpen />
+  </AppProviders>
+);
 
 export { App };

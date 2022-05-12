@@ -1,9 +1,20 @@
-import { Box, Button, Container, IconButton, Modal, Typography } from '@mui/material';
+import {
+  Box, Button, Container, IconButton, Modal, Typography,
+} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { keyframes } from '@emotion/react';
+
+const MainContainer = styled(Container)({
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '3rem',
+});
 
 const modalContainerStyle = {
   position: 'absolute' as 'absolute',
@@ -39,7 +50,7 @@ const UnauthenticatedApp = () => {
   const handleRegisterOpen = () => setIsOpenRegisterModal(true);
   const handleRegisterClose = () => setIsOpenRegisterModal(false);
   return (
-    <Container maxWidth={false}>
+    <MainContainer maxWidth={false}>
       <Box>
         <FavoriteIcon
           sx={{
@@ -110,7 +121,7 @@ const UnauthenticatedApp = () => {
           </Modal>
         </Box>
       </BoxMain>
-    </Container>
+    </MainContainer>
   );
 };
 
