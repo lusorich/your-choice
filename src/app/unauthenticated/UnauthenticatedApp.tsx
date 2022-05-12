@@ -1,7 +1,7 @@
 import {
   Box, Button, Container, IconButton, Modal, Typography,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/system';
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
