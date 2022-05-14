@@ -3,14 +3,12 @@ import React, { useState } from 'react';
 import {
   Box,
   createTheme,
-  Paper,
   styled,
   Switch,
   ThemeProvider,
-  Typography,
 } from '@mui/material';
 import { AppProviders } from './providers/AppProviders';
-import { UnauthenticatedApp } from './unauthenticated/UnauthenticatedApp';
+import { UnauthenticatedApp } from '../pages/unauthenticated/ui/UnauthenticatedApp';
 
 const defaultThemeStyles = {
   typography: {
@@ -84,7 +82,7 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
   const theme = isDarkMode ? darkTheme : lightTheme;
-  console.log("theme", theme);
+  console.log('theme', theme);
   return (
     <>
       <AppProviders>
