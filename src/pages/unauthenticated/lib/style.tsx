@@ -1,17 +1,17 @@
 import { styled } from '@mui/system';
-import {
-  Box, Container,
-} from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { keyframes } from '@emotion/react';
+import { ThemeColorMode } from 'widgets/theme/ui/useColorModeTheme';
 
-const MainContainer = styled(Container)({
+const MainContainer = styled(Container)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === ThemeColorMode.light ? '#fff' : '#000',
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
   gap: '3rem',
-});
+}));
 
 const ModalContainer = styled(Box)({
   position: 'absolute' as 'absolute',

@@ -3,7 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Modal } from 'shared/ui/modal/Modal';
-import { BoxMain, fadeIn, MainContainer } from '../lib/style';
+import { BoxMain, fadeIn } from '../lib/style';
 
 const UnauthenticatedApp = () => {
   const [isOpenLoginModal, setIsOpenLoginModal] = useState(false);
@@ -13,7 +13,13 @@ const UnauthenticatedApp = () => {
   const handleRegisterOpen = () => setIsOpenRegisterModal(true);
   const handleRegisterClose = () => setIsOpenRegisterModal(false);
   return (
-    <MainContainer maxWidth={false}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
       <Box>
         <FavoriteIcon
           sx={{
@@ -52,7 +58,7 @@ const UnauthenticatedApp = () => {
           </Modal>
         </Box>
       </BoxMain>
-    </MainContainer>
+    </Box>
   );
 };
 
