@@ -15,7 +15,7 @@ const MainContainer = styled(Container)(({ theme }) => ({
 
 const ModalContainer = styled(Box)({
   position: 'absolute' as 'absolute',
-  top: '30vw',
+  top: '30vh',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '30rem',
