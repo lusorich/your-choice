@@ -32,7 +32,11 @@ const UnauthenticatedApp = () => {
           }}
         />
       </Box>
-      <BoxMain>
+      <BoxMain
+        sx={{
+          marginTop: '2rem',
+        }}
+      >
         <Box>
           <Button onClick={handleLoginOpen}>Войти</Button>
           <Modal

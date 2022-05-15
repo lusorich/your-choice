@@ -70,6 +70,8 @@
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
+  "no-shadow": "off",
+  "@typescript-eslint/no-shadow": ["error"],
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
