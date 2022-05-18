@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconButton, Modal as MaterialModal, Typography } from '@mui/material';
-import { ModalContainer, ModalHeader } from 'pages/unauthenticated/lib/style';
+import { ModalContainer, ModalHeader } from 'pages/unauthenticated/ui/style';
 import CloseIcon from '@mui/icons-material/Close';
 
 interface ModalProps {

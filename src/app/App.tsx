@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, ThemeProvider } from '@mui/material';
 import { ThemeColorMode, useColorModeTheme } from 'widgets/theme/ui/useColorModeTheme';
 import { ThemeSwitcher } from 'widgets/theme/ui/ThemeSwitcher';
-import { MainContainer } from 'pages/unauthenticated/lib/style';
+import { MainContainer } from 'pages/unauthenticated/ui/style';
 import { AppProviders } from './providers/AppProviders';
 import { UnauthenticatedApp } from '../pages/unauthenticated/ui/UnauthenticatedApp';
 

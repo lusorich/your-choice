@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Modal } from 'shared/ui/modal/Modal';
 import { LoginForm } from 'features/auth/by-login/ui/LoginForm';
-import { BoxMain, fadeIn } from '../lib/style';
+import { BoxMain, fadeIn } from './style';
 
 const UnauthenticatedApp = () => {
   const [isOpenLoginModal, setIsOpenLoginModal] = useState(false);
