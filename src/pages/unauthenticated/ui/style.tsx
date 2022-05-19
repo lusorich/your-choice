@@ -21,6 +21,15 @@ const ModalContainer = styled(Box)({
   width: '30rem',
   backgroundColor: '#fff',
   boxShadow: '0 0 0.5rem black',
+  boxSizing: 'border-box',
+  '@media (max-width:600px)': {
+    top: 'unset',
+    left: 'unset',
+    transform: 'unset',
+    width: '100vw',
+    height: '100vh',
+    padding: '2rem',
+  },
 });
 
 const ModalHeader = styled(Box)({

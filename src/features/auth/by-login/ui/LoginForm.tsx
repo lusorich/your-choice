@@ -1,23 +1,21 @@
-import { Box, Input } from '@mui/material';
+import {
+  Alert, Box, Input, styled,
+} from '@mui/material';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
+import { schema } from '../lib/fields-schema';
+import { LoginFields } from '../lib/types';
 
-const schema = z.object({
-  login: z
-    .string()
-    .min(3, { message: 'Логин должен содержать не менее 3 символов' })
-    .max(15, { message: 'Логин должен быть не более 15 символов' }),
-  password: z
-    .string()
-    .min(5, { message: 'Вы ввели неверный пароль' })
-    .regex(
-      /'.*[`~<>?,.!@#$%^&*()-_+="'|{};:].*/,
-      'One special character',
-    )
-    .max(30, { message: 'Вы ввели неверный пароль' }),
-});
+const FormFieldWrapper = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+}));
+
+const FormAlertField = styled(Alert)(({ theme }) => ({
+  padding: '0 1rem',
+  border: 0,
+}));
 
 const LoginForm = () => {
   const {
@@ -31,27 +29,38 @@ const LoginForm = () => {
     },
     resolver: zodResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data: LoginFields) => console.log(data);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Controller
         name="login"
         control={control}
         render={({ field }) => (
-          <Box>
+          <FormFieldWrapper>
             <Input {...field} placeholder="Введите имя пользователя" />
-            {errors.login && errors.login.message}
-          </Box>
+            {errors.login && (
+              <FormAlertField variant="outlined" severity="error">
+                {errors.login.message}
+              </FormAlertField>
+            )}
+          </FormFieldWrapper>
         )}
       />
       <Controller
         name="password"
         control={control}
         render={({ field }) => (
-          <Input {...field} placeholder="Введите пароль" type="password" />
+          <FormFieldWrapper>
+            <Input {...field} placeholder="Введите пароль" type="password" />
+            {errors.password && (
+              <FormAlertField variant="outlined" severity="error">
+                {errors.password.message}
+              </FormAlertField>
+            )}
+          </FormFieldWrapper>
         )}
       />
-      <input type="submit" />
+      <button type="submit" />
     </form>
   );
 };

@@ -63,6 +63,7 @@ const useColorModeTheme = (
 ): ColorModeTheme => {
   const [colorMode, setColorMode] = useState(defaultColorMode);
   const activeTheme = colorMode === ThemeColorMode.light ? lightTheme : darkTheme;
+  console.log('activeTheme', activeTheme);
   return {
     setColorMode,
     colorMode,
