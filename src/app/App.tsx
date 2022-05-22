@@ -16,10 +16,6 @@ const App = () => {
     <ThemeProvider theme={activeTheme}>
       <MainContainer
         maxWidth={false}
-        sx={{
-          backgroundImage: 'url(./images/main-background.jpg)',
-          backgroundRepeat: 'round',
-        }}
       >
         <AppProviders>
           <UnauthenticatedApp />

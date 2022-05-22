@@ -25,12 +25,22 @@ const darkTheme = createTheme({
   ...defaultThemeStyles,
   palette: {
     mode: ThemeColorMode.dark,
+    text: {
+      primary: '#d05ac9',
+    },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          color: '#fff',
+          color: '#d05ac9',
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: '#d05ac9',
         },
       },
     },
@@ -41,12 +51,22 @@ const lightTheme = createTheme({
   ...defaultThemeStyles,
   palette: {
     mode: ThemeColorMode.light,
+    text: {
+      primary: '#661462',
+    },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          color: '#000',
+          color: '#661462',
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: '#661462',
         },
       },
     },

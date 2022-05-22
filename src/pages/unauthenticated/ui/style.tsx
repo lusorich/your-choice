@@ -5,6 +5,8 @@ import { ThemeColorMode } from 'widgets/theme/ui/useColorModeTheme';
 
 const MainContainer = styled(Container)(({ theme }) => ({
   backgroundColor: theme.palette.mode === ThemeColorMode.light ? '#fff' : '#000',
+  backgroundImage: theme.palette.mode === ThemeColorMode.light ? 'url(./images/main-background.jpg)' : 'url(./images/main-background-dark.jpg)',
+  backgroundRepeat: 'round',
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
