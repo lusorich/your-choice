@@ -13,15 +13,19 @@ const MainContainer = styled(Container)(({ theme }) => ({
   gap: '3rem',
 }));
 
-const ModalContainer = styled(Box)({
+const ModalContainer = styled(Box)(({ theme }) => ({
   position: 'absolute' as 'absolute',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '2rem',
   top: '30vh',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '30rem',
-  backgroundColor: '#fff',
+  backgroundColor: theme.palette.mode === ThemeColorMode.light ? '#fff' : '#000',
   boxShadow: '0 0 0.5rem black',
   boxSizing: 'border-box',
+  padding: '1rem 1rem 2rem 1rem',
   '@media (max-width:600px)': {
     top: 'unset',
     left: 'unset',
@@ -30,7 +34,7 @@ const ModalContainer = styled(Box)({
     height: '100vh',
     padding: '2rem',
   },
-});
+}));
 
 const ModalHeader = styled(Box)({
   display: 'flex',

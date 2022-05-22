@@ -46,9 +46,6 @@ const UnauthenticatedApp = () => {
             onClose={handleLoginClose}
           >
             <LoginForm />
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
           </Modal>
         </Box>
         <Box>

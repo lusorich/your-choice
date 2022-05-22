@@ -1,5 +1,5 @@
 import {
-  Alert, Box, Input, styled,
+  Alert, Box, Button, Input, styled,
 } from '@mui/material';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
@@ -10,6 +10,12 @@ import { LoginFields } from '../lib/types';
 const FormFieldWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
+}));
+
+const FormWrapper = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '2rem',
 }));
 
 const FormAlertField = styled(Alert)(({ theme }) => ({
@@ -32,35 +38,39 @@ const LoginForm = () => {
   const onSubmit = (data: LoginFields) => console.log(data);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Controller
-        name="login"
-        control={control}
-        render={({ field }) => (
-          <FormFieldWrapper>
-            <Input {...field} placeholder="Введите имя пользователя" />
-            {errors.login && (
+      <FormWrapper>
+        <Controller
+          name="login"
+          control={control}
+          render={({ field }) => (
+            <FormFieldWrapper>
+              <Input {...field} placeholder="Введите имя пользователя" />
+              {errors.login && (
               <FormAlertField variant="outlined" severity="error">
                 {errors.login.message}
               </FormAlertField>
-            )}
-          </FormFieldWrapper>
-        )}
-      />
-      <Controller
-        name="password"
-        control={control}
-        render={({ field }) => (
-          <FormFieldWrapper>
-            <Input {...field} placeholder="Введите пароль" type="password" />
-            {errors.password && (
+              )}
+            </FormFieldWrapper>
+          )}
+        />
+        <Controller
+          name="password"
+          control={control}
+          render={({ field }) => (
+            <FormFieldWrapper>
+              <Input {...field} placeholder="Введите пароль" type="password" />
+              {errors.password && (
               <FormAlertField variant="outlined" severity="error">
                 {errors.password.message}
               </FormAlertField>
-            )}
-          </FormFieldWrapper>
-        )}
-      />
-      <button type="submit" />
+              )}
+            </FormFieldWrapper>
+          )}
+        />
+        <Button variant="outlined" size="medium" type="submit">
+          Войти
+        </Button>
+      </FormWrapper>
     </form>
   );
 };

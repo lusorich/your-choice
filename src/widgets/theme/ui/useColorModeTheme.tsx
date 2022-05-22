@@ -9,8 +9,15 @@ export enum ThemeColorMode {
 
 const defaultThemeStyles = {
   typography: {
-    fontFamily: 'Raleway',
+    fontFamily: 'Raleway, sans-serif',
+    letterSpacing: 'inherit',
     fontSize: 16,
+    button: {
+      letterSpacing: 'inherit',
+    },
+    h6: {
+      letterSpacing: 'inherit',
+    },
   },
 };
 

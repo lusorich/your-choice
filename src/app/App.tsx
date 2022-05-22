@@ -14,7 +14,13 @@ const App = () => {
   );
   return (
     <ThemeProvider theme={activeTheme}>
-      <MainContainer maxWidth={false}>
+      <MainContainer
+        maxWidth={false}
+        sx={{
+          backgroundImage: 'url(./images/main-background.jpg)',
+          backgroundRepeat: 'round',
+        }}
+      >
         <AppProviders>
           <UnauthenticatedApp />
           <ReactQueryDevtools initialIsOpen />
