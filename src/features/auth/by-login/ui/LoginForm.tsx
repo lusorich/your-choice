@@ -4,21 +4,21 @@ import {
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { schema } from '../lib/fields-schema';
-import { LoginFields } from '../lib/types';
+import { loginSchema } from '../lib/fields-schema';
+import { LoginFormFields } from '../lib/types';
 
-const FormFieldWrapper = styled(Box)(({ theme }) => ({
+const FormFieldWrapper = styled(Box)(() => ({
   display: 'flex',
   flexDirection: 'column',
 }));
 
-const FormWrapper = styled(Box)(({ theme }) => ({
+const FormWrapper = styled(Box)(() => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
 }));
 
-const FormAlertField = styled(Alert)(({ theme }) => ({
+const FormAlertField = styled(Alert)(() => ({
   padding: '0 1rem',
   border: 0,
 }));
@@ -33,9 +33,9 @@ const LoginForm = () => {
       login: '',
       password: '',
     },
-    resolver: zodResolver(schema),
+    resolver: zodResolver(loginSchema),
   });
-  const onSubmit = (data: LoginFields) => console.log(data);
+  const onSubmit = (data: LoginFormFields) => console.log(data);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormWrapper>

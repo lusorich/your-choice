@@ -1,9 +1,10 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
 import React, { useState } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Modal } from 'shared/ui/modal/Modal';
 import { LoginForm } from 'features/auth/by-login/ui/LoginForm';
+import { RegistrationForm } from 'features/auth/by-login/ui/RegistrationForm';
 import { BoxMain, fadeIn } from './style';
 
 const UnauthenticatedApp = () => {
@@ -55,9 +56,7 @@ const UnauthenticatedApp = () => {
             title="Зарегистрироваться в приложении"
             onClose={handleRegisterClose}
           >
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <RegistrationForm />
           </Modal>
         </Box>
       </BoxMain>

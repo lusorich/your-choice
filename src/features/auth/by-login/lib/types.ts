@@ -1,6 +1,13 @@
-type LoginFields = {
+type LoginFormFields = {
   login: string;
   password: string;
 };
 
-export { LoginFields };
+type RegistrationFormFields = {
+  firstName: string;
+  lastName: string;
+  login: string;
+  password: string;
+}
+
+export { LoginFormFields, RegistrationFormFields };
